@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<script type="text/javascript" src="canvaslib.js"></script>
+</head>
+
+<body>
+
+<canvas id="canvas1"></canvas>
+
+<script type="text/javascript">
+var i = 1;
+function draw () {
+  document.write ("+" + i);
+  console.log (image.ready);
+  if (i == 25) {
+    g2d.stop_frame_callback ("draw");
+  }
+  i = i + 1;
+}
+var image = new g2d.static_img;
+console.log (image.x);
+console.log (image.ready);
+image.src = "http://www.meteo.cat/servmet/modelitzacio/wrf27_00/0slpv.gif";
+image.load_image();
+document.body.appendChild(image.image);
+g2d.attach (document.body);
+g2d.attach (document.getElementById("canvas1"));
+console.log (g2d.canvas.canvas1.id);
+g2d.detach (document.body);
+g2d.detach (document.getElementById("canvas1"));
+g2d.detach (document.getElementById("canvas1"));
+g2d.add_frame_callback ("draw", draw);
+g2d.start_frame_callback ("draw");
+</script>
+
+</body>
+
+</html>
