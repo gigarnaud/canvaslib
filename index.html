@@ -7,14 +7,12 @@
 </head>
 
 <body>
-
 <canvas id="canvas1"></canvas>
 
 <script type="text/javascript">
 var i = 1;
 function draw () {
-  document.write ("+" + i);
-  console.log (image.ready);
+  console.log ("+" + i);
   if (i == 25) {
     g2d.stop_frame_callback ("draw");
   }

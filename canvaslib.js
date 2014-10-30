@@ -27,11 +27,11 @@
 	  
 	  this.start = function () {
 	    this.interval_object = setInterval (this.callback, (1000 / this.framerate));
-	  }
+	  };
 	  
 	  this.stop = function () {
 	    clearInterval (this.interval_object);
-	  }
+	  };
 	  
 	},
 	
